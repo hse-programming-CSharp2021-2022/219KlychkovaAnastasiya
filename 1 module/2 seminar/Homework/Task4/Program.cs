@@ -18,8 +18,10 @@ class Program
         string n;
         do
         {
-            Console.Write("Введите четырехзначное число: ");
-            int.TryParse(Console.ReadLine(), out x);
+            do
+            {
+                Console.Write("Введите четырехзначное число: ");
+            } while (!int.TryParse(Console.ReadLine(), out x) || !(x / 10000 == 0) || x / 1000 == 0);
             n = C(x);
             Console.WriteLine(n);
             Console.WriteLine("Для выхода из программы вводите ESC, для повторения решения – любую другую клавишу.");

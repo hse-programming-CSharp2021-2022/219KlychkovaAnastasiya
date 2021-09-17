@@ -20,8 +20,10 @@ class Program
     {
         int p;
         do {
-            Console.Write("Введите трехзначное число: ");
-            int.TryParse(Console.ReadLine(), out p);
+            do
+            {
+                Console.Write("Введите трехзначное число: ");
+            } while (!int.TryParse(Console.ReadLine(), out p) || !(p / 1000 == 0) || p / 100 == 0);
             int res;
             int a, b, c;
             a = p % 10;
