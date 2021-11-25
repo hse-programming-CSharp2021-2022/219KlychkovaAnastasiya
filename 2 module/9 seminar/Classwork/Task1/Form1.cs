@@ -67,5 +67,26 @@ namespace Task1
             }
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBox1.SelectedItem.ToString())
+            {
+                case "Red":
+                    label1.ForeColor = Color.Red;
+                    break;
+                case "Green":
+                    label1.ForeColor = Color.Green;
+                    break;
+                case "Orange":
+                    label1.ForeColor = Color.DarkOrange;
+                    break;
+                case "Purple":
+                    label1.ForeColor = Color.Purple;
+                    break;
+                case "Blue":
+                    label1.ForeColor = Color.Blue;
+                    break;
+            }
+        }
     }
 }

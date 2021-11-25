@@ -37,25 +37,28 @@ namespace Task1
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(24, 90);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 44);
+            this.label1.Size = new System.Drawing.Size(480, 446);
             this.label1.TabIndex = 0;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(185, 206);
+            this.button1.Location = new System.Drawing.Point(188, 99);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 34);
             this.button1.TabIndex = 1;
             this.button1.Text = "I love...";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -63,7 +66,7 @@ namespace Task1
             // 
             this.MagicButton2.Font = new System.Drawing.Font("Vladimir Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MagicButton2.ForeColor = System.Drawing.Color.DarkOrange;
-            this.MagicButton2.Location = new System.Drawing.Point(264, 269);
+            this.MagicButton2.Location = new System.Drawing.Point(264, 153);
             this.MagicButton2.Name = "MagicButton2";
             this.MagicButton2.Size = new System.Drawing.Size(204, 47);
             this.MagicButton2.TabIndex = 2;
@@ -76,9 +79,9 @@ namespace Task1
             // 
             this.MagicButton.Font = new System.Drawing.Font("Vladimir Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MagicButton.ForeColor = System.Drawing.Color.Purple;
-            this.MagicButton.Location = new System.Drawing.Point(24, 269);
+            this.MagicButton.Location = new System.Drawing.Point(31, 153);
             this.MagicButton.Name = "MagicButton";
-            this.MagicButton.Size = new System.Drawing.Size(180, 47);
+            this.MagicButton.Size = new System.Drawing.Size(204, 47);
             this.MagicButton.TabIndex = 3;
             this.MagicButton.Text = "MagicButton";
             this.MagicButton.UseVisualStyleBackColor = true;
@@ -113,12 +116,28 @@ namespace Task1
             this.label2.TabIndex = 6;
             this.label2.Text = "Enter your name:";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Red",
+            "Orange",
+            "Green",
+            "Blue",
+            "Purple"});
+            this.comboBox1.Location = new System.Drawing.Point(150, 261);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(182, 33);
+            this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(480, 446);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkBox1);
@@ -144,6 +163,7 @@ namespace Task1
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
