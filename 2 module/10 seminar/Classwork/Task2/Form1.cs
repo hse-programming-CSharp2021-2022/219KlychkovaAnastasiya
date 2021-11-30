@@ -16,30 +16,21 @@ namespace Task2
         {
             InitializeComponent();
         }
-
-        int p1 = 1;
-        int p2 = 2;
+        string[] poem = new string[] {"Чудесно всё, что узнаю?,","Постыдно всё, что совершаю.","Готов идти навстречу раю,","И медлю в сумрачном краю."};
         private void button1_Click(object sender, EventArgs e)
         {
-            int p3 = p1 + 2*p2;
-            if (p3 < 0)
-            {
-                MessageBox.Show("Overflow!!!");
-                p1 = 1;
-                p2 = 2;
-                label1.Text = p2.ToString();
-            }
-            else
-            {
-                label1.Text = p3.ToString();
-                p1 = p2;
-                p2 = p3;
-            }
+            textBox1.Lines = poem;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string s = string.Join(" ", textBox1.Lines);
+            MessageBox.Show(s);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label1.Text = p2.ToString();
+            textBox1.Lines = poem;
         }
     }
 }
