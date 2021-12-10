@@ -40,7 +40,19 @@ namespace Task2
                 button.Visibility = Visibility.Visible;
             }
         }
-        int plus;
-        int minus;
+        int plus = 0;
+        int minus = 0;
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            plus++;
+            t1.Text = plus.ToString();
+        }
+
+        private void Window_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            minus++;
+            t2.Text = minus.ToString();
+        }
     }
 }

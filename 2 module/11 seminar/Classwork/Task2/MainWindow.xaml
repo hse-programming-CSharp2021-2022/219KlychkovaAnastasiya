@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Task2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="layout">
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="367,217,0,0" VerticalAlignment="Top"/>
+        Title="MainWindow" Height="450" Width="800" MouseDoubleClick="Window_MouseDoubleClick">
+    <Grid x:Name="layout" Margin="0,0,10,0">
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="367,217,0,0" VerticalAlignment="Top" Click="button_Click"/>
+        <TextBlock x:Name="t1" HorizontalAlignment="Left" Margin="126,376,0,0"  TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="t2" HorizontalAlignment="Left" Margin="646,376,0,0"  TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
