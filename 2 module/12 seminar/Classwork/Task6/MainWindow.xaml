@@ -1,0 +1,27 @@
+﻿<Window x:Class="Task6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="450">
+    <Grid ShowGridLines="True" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width ="0.1*"/>
+            <ColumnDefinition Width ="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Slider x:Name="horisontalSlider" Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="389"></Slider>
+        <Slider x:Name="verticalSlider" Grid.Row="0" Grid.Column="0" Orientation="Vertical" Minimum="0" Maximum="370"></Slider>
+
+        <Canvas x:Name="canvas" Grid.Row="0" Grid.Column="1" Background="LemonChiffon">
+            <Ellipse Height="20" Width="20" Fill="Red" Canvas.Top="{Binding ElementName=verticalSlider,Path = Value}" Canvas.Left="{Binding ElementName=horisontalSlider, Path=Value}"></Ellipse>
+        </Canvas>
+    </Grid>
+</Window>
