@@ -8,12 +8,20 @@ namespace SQLPrac
     class Program
     {
         // Put your SQL queries here:
-        private static string task01 = null;
-        private static string task02 = null;
-        private static string task03 = null;
-        private static string task04 = null;
-        private static string task05 = null;
-        private static string task06 = null;
+        private static string task01 = "SELECT name, area_sqkm FROM Countries WHERE area_sqkm > 1000000";
+        private static string task02 = "SELECT c.name FROM Olympics o JOIN Countries c ON o.country_id = c.country_id";
+        private static string task03 = "SELECT name FROM Players WHERE name LIKE 'Mi%'";
+        private static string task04 = "SELECT e.name FROM Olympics o JOIN Events e ON e.olympic_id = o.olympic_id WHERE o.year = 2000";
+        private static string task05 = "SELECT p.name, r.result, e.result_noted_in FROM Results r " +
+            "JOIN Players p ON p.player_id = r.player_id " +
+            "JOIN Events e ON r.event_id = e.event_id " +
+            "JOIN Olympics o ON e.olympic_id = o.olympic_id " +
+            "WHERE r.medal = 'GOLD' AND o.year = 2004";
+        private static string task06 = "SELECT c.name, count(*) FROM Results r " +
+            "JOIN Players p ON p.player_id = r.player_id " +
+            "JOIN Countries c ON p.country_id = c.country_id " +
+            "GROUP BY c.country_id " +
+            "ORDER BY count(*) DESC";
 
         /// <summary>
         /// Executes the SQL query corresponding to the task.
