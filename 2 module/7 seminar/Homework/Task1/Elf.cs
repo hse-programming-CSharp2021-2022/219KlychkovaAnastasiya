@@ -12,7 +12,7 @@ namespace Task1
         private static int RandAge()
         {
             Random rnd = new Random();
-            return rnd.Next(100, 201);
+            return rnd.Next(100, 200);
         }
         
         public Elf(string name, double speed) : base(name, speed +(double)(RandAge()) / 77)
