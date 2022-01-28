@@ -1,4 +1,5 @@
-﻿using System;
+﻿// ДЗ
+using System;
 
 namespace Task1
 {
