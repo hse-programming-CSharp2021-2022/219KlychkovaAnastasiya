@@ -14,7 +14,7 @@ namespace Task1
     {
         public string Surname { get; set; }
         public int CourseNumber { get; set; }
-        public Student(string surname,int course)
+        public Student(string surname, int course)
         {
             Surname = surname;
             CourseNumber = course;
@@ -30,7 +30,7 @@ namespace Task1
     {
         public string GroupName { get; set; }
         public List<Student> students;
-        public Group(string name,params Student[] students)
+        public Group(string name, params Student[] students)
         {
             GroupName = name;
             this.students = new(students);
@@ -58,7 +58,7 @@ namespace Task1
                 Console.WriteLine(s.CourseNumber);
             }
             Console.WriteLine();
-            Group group1 = new("BPI219", student1, new Student("Petrov", 1),new Student("Ivanov", 1));
+            Group group1 = new("BPI219", student1, new Student("Petrov", 1), new Student("Ivanov", 1));
             using (FileStream file = new FileStream("f2.txt", FileMode.OpenOrCreate))
             {
                 formatter.Serialize(file, group1);
@@ -103,7 +103,7 @@ namespace Task1
             string json = JsonSerializer.Serialize<Student>(student1, options);
             Console.WriteLine(json);
             Student student2 = JsonSerializer.Deserialize<Student>(json, options);
-            Console.WriteLine(student2.Surname+" "+student2.CourseNumber);
+            Console.WriteLine(student2.Surname + " " + student2.CourseNumber);
             string json2 = JsonSerializer.Serialize<Group>(group1, options);
             Console.WriteLine(json2);
             Group group2 = JsonSerializer.Deserialize<Group>(json2, options);
