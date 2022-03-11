@@ -4,16 +4,18 @@ namespace Task1
 {
     class Fibbonacci
     {
-        int curr=0;
-        int next=1;
+        int first=1;
+        int second=1;
         public IEnumerable NextElement(int n)
         {
+            int curr = first;
+            int next = second;
             for (int i = 0; i < n; i++)
             {
-                yield return x0;
-                int s = x0 + x1;
-                x0 = x1;
-                x1 = s;
+                yield return curr;
+                int sum = curr + next;
+                curr = next;
+                next = sum;
             }
         }
     }
@@ -21,7 +23,12 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var fib = new Fibbonacci();
+            foreach (var el in fib.NextElement(5))
+                Console.WriteLine(el);
+            Console.WriteLine("***");
+            foreach(var el in fib.NextElement(10))
+                Console.WriteLine(el);
         }
     }
 }
